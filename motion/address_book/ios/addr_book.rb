@@ -142,7 +142,7 @@ module AddressBook
     end
     def status; "live"; end
     def all_people
-      ABAddressBookCopyArrayOfAllPeople(ab)
+      ABAddressBookCopyArrayOfAllPeople(ab) rescue []
     end
     def all_people_in_source(source)
       ABAddressBookCopyArrayOfAllPeopleInSource(ab, source)
